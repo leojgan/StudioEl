@@ -1,33 +1,38 @@
-import { useState } from 'react';
-import { Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavItem, NavLink } from 'reactstrap';
+import { useState } from 'react'
+import { Navbar, NavbarBrand, Collapse, NavbarToggler, Nav, NavItem } from 'reactstrap'
+import { NavLink } from 'react-router-dom'
+// import NucampLogo from '../app/assets/img/logo.png'
+import UserLoginForm from '../user/userLoginForm'
 
 const Header = () => {
-    const [collapsed, setCollapsed] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false)
 
-    const toggleNavbar = () => setCollapsed(!collapsed);
-
-    return(
-        <div>
-            <Navbar color="faded" light>
-                <NavbarBrand href="/" className="me-auto">
-                reactstrap
-                </NavbarBrand>
-                <NavbarToggler onClick={toggleNavbar} className="me-2" />
-                <Collapse isOpen={!collapsed} navbar>
-                <Nav navbar>
+    return (
+        <Navbar dark color = 'primary' sticky = 'top' expand = 'md'>
+            <NavbarBrand className='ms-5' href='/'>
+                {/* <img className='float-start' src = {NucampLogo} alt="nucamp logo" /> */}
+                <h1 className='mt-1'>Studio El Teaching Resources</h1>
+            </NavbarBrand>
+            <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />
+            <Collapse isOpen={menuOpen} navbar>
+                <Nav className='ms-auto' navbar>
                     <NavItem>
-                    <NavLink href="/components/">Components</NavLink>
+                        <NavLink className='nav-link' to='/'>Home</NavLink>
                     </NavItem>
                     <NavItem>
-                    <NavLink href="https://github.com/reactstrap/reactstrap">
-                        GitHub
-                    </NavLink>
+                        <NavLink className='nav-link' to='/directory'>Resources</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink className='nav-link' to='/about'>About</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink className='nav-link' to='/contact'>Contact</NavLink>
                     </NavItem>
                 </Nav>
-                </Collapse>
-            </Navbar>
-        </div>
-    );
-};
+                <UserLoginForm />
+            </Collapse>
+        </Navbar>
+    )
+}
 
-export default Header;
+export default Header
