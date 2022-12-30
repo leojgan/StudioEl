@@ -1,17 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
 body {
   font-family: sans-serif;
 }
 
-h1,
 h2,
 h3,
 .card-body > .card-title {
   font-family: serif;
 }
 
-.card-title {
-  font-weight: 500;
+.rocksalt {
+  font-family: 'Rock Salt', sans-serif;
+}
+
+.portrait {
+  border-radius: 8px;
+  border: 5px solid #00E0E0;
+  box-shadow: 7px 7px 20px #2e3192;
+  width: 400px;
+  height: auto;
+  margin: 2rem;
+}
+
+.portrait-text {
+  margin: 3em;
+  padding: 3em;
+}
+
+.cursive {
+  font-family: 'Dancing Script', cursive;
+}
+
+.spotlight-card {
+  border-radius: 8px;
+  width: 300px;
+  height: auto;
+}
+
+.spotlight-card:hover {
+  box-shadow: 0px 0px 10px #00E0E0;
+}
+
+.cardTitle {
   font-size: 1.25rem;
+  text-align: center;
 }
 
 h2 {
@@ -30,7 +64,8 @@ h2 {
 }
 
 .site-footer {
-  background-image: linear-gradient(#cec8ff, white);
+  color: #00E0E0;
+  background-color: #2E3192;
   padding: 20px 0;
   margin-top: 2rem;
 }
@@ -47,9 +82,9 @@ h2 {
   max-width: 4rem;
 }
 
-.navbar-dark {
-  background-color: #901cad;
-  background-image: linear-gradient(to right, #5637dd, #3046c5, #510e5a);
+.navbar {
+  color: #2E3192;
+  background-color: #00E0E0;
   margin-bottom: 2rem;
   min-height: 8rem;
 }
