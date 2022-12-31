@@ -7,7 +7,7 @@ const SpotlightList = () => {
         <Row>
             {SPOTLIGHTS.map(spotlight => {
                 return (
-                    <Col>
+                    <Col className="col-12 col-sm-6 col-lg-3 my-3">
                         <SpotlightCard spotlight={spotlight} />
                     </Col>
                 )

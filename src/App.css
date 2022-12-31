@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Rock+Salt');
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap');
 
 body {
-  font-family: sans-serif;
+  font-family: 'Cabin', sans-serif;
 }
 
 h2,
@@ -15,6 +16,10 @@ h3,
   font-family: 'Rock Salt', sans-serif;
 }
 
+.nav-text {
+  font-family: 'Cabin Bold', sans-serif;
+}
+
 .portrait {
   border-radius: 8px;
   border: 5px solid #00E0E0;
@@ -25,6 +30,7 @@ h3,
 }
 
 .portrait-text {
+  font-family: 'Cabin', sans-serif;
   margin: 3em;
   padding: 3em;
 }
@@ -33,19 +39,22 @@ h3,
   font-family: 'Dancing Script', cursive;
 }
 
-.spotlight-card {
+.card-effect {
   border-radius: 8px;
-  width: 300px;
-  height: auto;
+  width: auto;
 }
 
-.spotlight-card:hover {
+.card-effect:hover {
   box-shadow: 0px 0px 10px #00E0E0;
 }
 
 .cardTitle {
   font-size: 1.25rem;
   text-align: center;
+}
+
+.card-text {
+  font-family: 'Cabin', sans-serif;
 }
 
 h2 {

@@ -1,7 +1,7 @@
 import { Card, CardBody, CardTitle, CardImg, CardText } from 'reactstrap'
 
-const SpotlightCard = ({ spotlight }) => {
-    const { title, info, image } = spotlight
+const ResourceCard = ({ resource }) => {
+    const { title, info, image } = resource
     return (
         <Card className='card-effect'>
             <CardBody>
@@ -9,7 +9,7 @@ const SpotlightCard = ({ spotlight }) => {
                     {title}
                 </CardTitle>
             </CardBody>
-            <CardImg width='100%' src={image} alt={title} />
+            <CardImg width='100%' src={image} atl={title} />
             <CardBody>
                 <CardText className='card-text'>
                     {info}
@@ -19,4 +19,4 @@ const SpotlightCard = ({ spotlight }) => {
     )
 }
 
-export default SpotlightCard
+export default ResourceCard

@@ -11,22 +11,22 @@ const Header = () => {
         <Navbar className='header' sticky = 'top' expand = 'md'>
             <NavbarBrand className='ms-5' href='/'>
                 <img className='float-start' src = {StudioElLogo} alt="Studio El Logo" />
-                <h2 className='mt-1 rocksalt'>Studio El Teaching Resources</h2>
+                <h2 className='d-none d-lg-block mt-1 rocksalt'>Teaching Resources</h2>
             </NavbarBrand>
             <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />
             <Collapse isOpen={menuOpen} navbar>
                 <Nav className='ms-auto' navbar>
                     <NavItem>
-                        <NavLink className='nav-link' to='/'>Home</NavLink>
+                        <NavLink className='nav-link nav-text' to='/'>Home</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink className='nav-link' to='/directory'>Resources</NavLink>
+                        <NavLink className='nav-link nav-text' to='/resources'>Resources</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink className='nav-link' to='/about'>About</NavLink>
+                        <NavLink className='nav-link nav-text' to='/about'>About</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink className='nav-link' to='/contact'>Contact</NavLink>
+                        <NavLink className='nav-link nav-text' to='/contact'>Contact</NavLink>
                     </NavItem>
                 </Nav>
                 <UserLoginForm />
